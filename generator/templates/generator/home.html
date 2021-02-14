@@ -1,0 +1,44 @@
+<h1>Password Generator</h1>
+
+<h3>Generate Random Password</h3>
+<form action="{% url 'generatepassword' %}">
+    <span>Password Length :</span>
+    <select name='length'>
+        <option value='6'>6</option>
+        <option value='7'>7</option>
+        <option value='8'>8</option>
+        <option value='9'>9</option>
+        <option value='10'>10</option>
+        <option value='11'>11</option>
+        <option value='12' selected='selected'>12</option>
+        <option value='13'>13</option>
+        <option value='14'>14</option>
+    </select>
+    <br><br>
+    <input type='checkbox' name="uppercase">Upper Case
+    <br>
+    <input type='checkbox' name="numbers">Nubmbers
+    <br>
+    <input type='checkbox' name="special">Special Characters
+    <br><br>
+    <input type='submit' value="Generate">
+</form><br><br>
+
+<h3>Encrypt</h3>
+<form action="{% url 'encrypt' %}">
+    <lable for='original_password'>Original Password:</lable>
+    <input type='text' id='original_password' name='original_password'>
+    <input type='submit' value="Encrypt Password">
+</form><br><br>
+
+<h3>Decrypt</h3>
+<form action="{% url 'decrypt' %}">
+    <lable for='cipher'>Cipher:</lable>
+    <input type='text' id='cipher' name='cipher'><br><br>
+    <lable for='key_pair'>Key Pair:</lable>
+    <input type='text' id='key_pair' name='key_pair'><br><br>
+    
+    <input type='submit' value="Decode the Password">
+</form><br><br>
+
+{{ password }}
