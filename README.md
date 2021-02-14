@@ -1,8 +1,8 @@
 # Password-Maker-RSA-Encryption
 
-### Django based password maker web-app
+#### Django based password maker web-app
 
-### You can encrypt your randomly made password with RSA algorithm
+#### You can encrypt your randomly made password with RSA algorithm
 
 RSA algorithm is a powerful and efficient algorithm.
 
